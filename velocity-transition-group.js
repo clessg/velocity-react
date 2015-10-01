@@ -40,6 +40,7 @@ var _ = {
   pluck: require('lodash/collection/pluck'),
 };
 var React = require('react');
+var ReactDOM = require('react-dom');
 var TransitionGroup = require('react-addons-transition-group');
 var Velocity = require('velocity-animate');
 
@@ -56,15 +57,15 @@ var VelocityTransitionGroupChild = React.createClass({
   },
 
   componentWillAppear: function (doneFn) {
-    this.props.willAppearFunc(React.findDOMNode(this), doneFn);
+    this.props.willAppearFunc(ReactDOM.findDOMNode(this), doneFn);
   },
 
   componentWillEnter: function (doneFn) {
-    this.props.willEnterFunc(React.findDOMNode(this), doneFn);
+    this.props.willEnterFunc(ReactDOM.findDOMNode(this), doneFn);
   },
 
   componentWillLeave: function (doneFn) {
-    this.props.willLeaveFunc(React.findDOMNode(this), doneFn);
+    this.props.willLeaveFunc(ReactDOM.findDOMNode(this), doneFn);
   },
 
   render: function () {
