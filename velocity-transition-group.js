@@ -39,6 +39,7 @@ var _ = {
   omit: require('lodash/object/omit'),
   pluck: require('lodash/collection/pluck'),
 };
+var React = require('react');
 var TransitionGroup = require('react-addons-transition-group');
 var Velocity = require('velocity-animate');
 
