@@ -39,7 +39,7 @@ var _ = {
   omit: require('lodash/object/omit'),
   pluck: require('lodash/collection/pluck'),
 };
-var React = require('react/addons');
+var TransitionGroup = require('react-addons-transition-group');
 var Velocity = require('velocity-animate');
 
 // Internal wrapper for the transitioned elements. Delegates all child lifecycle events to the
@@ -114,7 +114,7 @@ var VelocityTransitionGroup = React.createClass({
       transitionGroupProps.childFactory = this._wrapChild;
     }
 
-    return React.createElement(React.addons.TransitionGroup, transitionGroupProps, this.props.children);
+    return React.createElement(TransitionGroup, transitionGroupProps, this.props.children);
   },
 
   childWillAppear: function (node, doneFn) {
